@@ -3,18 +3,18 @@ import { asXmlElement } from "./asXmlElement";
 
 const outputElement = {
     "elements": [
-        {
-            "elements": [
-                {
-                    "text": "testing",
-                    "type": "text",
-                },
-            ],
-            "name": "name",
-            "type": "element",
-        },
-    ],
-}
+      {
+        "type": "element",
+        "name": "name",
+        "elements": [
+          {
+            "type": "text",
+            "text": "testing"
+          }
+        ]
+      }
+    ]
+  }
 
 describe("asXmlElement", () => {
     test("string", () => {

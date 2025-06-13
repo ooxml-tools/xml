@@ -1,14 +1,14 @@
 import { describe, expect, test } from "vitest";
-import { xmlCompact } from "./xmlCompact";
+import { compact } from "./compact";
 
 describe("xmlCompact", () => {
     test("already compacted", () => {
-        const output = xmlCompact(`<name>test</name>`);
+        const output = compact(`<name>test</name>`);
         expect(output).toEqual("<name>test</name>")
     });
 
     test("not compacted", () => {
-        const output = xmlCompact(`
+        const output = compact(`
                 <name>
                         test
             </name>

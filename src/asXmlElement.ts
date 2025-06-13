@@ -1,4 +1,4 @@
-import { xml2js, type Element } from "xml-js";
+import { type Element, xml2js } from "xml-js";
 
 export function asXmlElement (xml: string | Element): Element {
     if (typeof xml === "string") {
