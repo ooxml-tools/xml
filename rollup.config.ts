@@ -10,7 +10,6 @@ export default [
   {
     input: {
       index: "src/index.ts",
-      commands: "src/commands/index.ts",
     },
     output: {
       dir: outputDir,
@@ -25,11 +24,6 @@ export default [
   {
     input: "src/index.ts",
     output: [{ file: `${outputDir}/types.d.ts`, format: "es" }],
-    plugins: [json(), typescriptPaths({ preserveExtensions: true }), dts()],
-  },
-  {
-    input: "src/commands/index.ts",
-    output: [{ file: `${outputDir}/commands.d.ts`, format: "es" }],
     plugins: [json(), typescriptPaths({ preserveExtensions: true }), dts()],
   },
 ];
