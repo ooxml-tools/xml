@@ -8,6 +8,9 @@
 
 Some XML helpers to help with OOXML development
 
+> [!NOTE]
+> These are all based around [`xml-js`](https://www.npmjs.com/package/xml-js) and output that modules internal format
+
 
 ## API
 
@@ -109,7 +112,7 @@ From [the wikipedia page](https://en.wikipedia.org/wiki/CDATA)
 
 > CDATA section is a piece of element content that is marked up to be interpreted literally, as textual data, not as marked-up content.
 
-But `<name><![CDATA[one < two]]><name>` is ugly and hard to read. So instead
+But `<name><![CDATA[one < two]]><name>` is ugly and hard to read, so instead
 
 ```ts
 safeXml`<name>${cdata("one < two")}</name>`
