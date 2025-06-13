@@ -1,0 +1,48 @@
+{
+  "name": "@ooxml-tools/xml",
+  "description": "Some XML helpers to help with OOXML development",
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "./dist/npm/index.js",
+  "types": "./dist/npm/types.d.ts",
+  "type": "module",
+  "scripts": {
+    "lint": "npx prettier . --check",
+    "test": "vitest",
+    "lint:format": "npx prettier . --write",
+    "build": "rollup -c rollup.config.ts --configPlugin typescript"
+  },
+  "exports": {
+    ".": "./dist/npm/index.js",
+    "./commands": "./dist/npm/commands.js"
+  },
+  "files": [
+    "./dist/npm",
+    "./package.json",
+    "./README.md"
+  ],
+  "devDependencies": {
+    "@rollup/plugin-json": "^6.1.0",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "@rollup/plugin-virtual": "^3.0.2",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/yargs": "^17.0.32",
+    "prettier": "^3.4.2",
+    "rollup": "^4.18.1",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-preserve-shebang": "^1.0.1",
+    "rollup-plugin-typescript-paths": "^1.5.0",
+    "ts-node": "^10.9.2",
+    "tslib": "^2.6.3",
+    "tsx": "^4.17.0",
+    "typescript": "^5.5.4",
+    "vitest": "^2.1.6"
+  },
+  "engines": {
+    "node": ">=20.x"
+  },
+  "dependencies": {
+    "xml-js": "^1.6.11"
+  }
+}
