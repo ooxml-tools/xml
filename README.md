@@ -118,6 +118,11 @@ But `<name><![CDATA[one < two]]><name>` is ugly and hard to read, so instead
 safeXml`<name>${cdata("one < two")}</name>`
 ```
 
+## CI
+
+[![codecov](https://codecov.io/gh/ooxml-tools/xml/graph/badge.svg?token=N82AKMVJM7)](https://codecov.io/gh/ooxml-tools/xml)
+
+
 ## License
 
 MIT
