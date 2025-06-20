@@ -9,6 +9,7 @@
   "scripts": {
     "lint": "npx prettier . --check",
     "test": "vitest run --coverage",
+    "test:ci": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml",
     "lint:format": "npx prettier . --write",
     "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },

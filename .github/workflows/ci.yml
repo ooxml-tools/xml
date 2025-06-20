@@ -22,7 +22,7 @@ jobs:
         with:
           node-version: "20.x"
       - run: npm ci
-      - run: npm test
+      - run: npm run test:ci
       - run: npm run build
       - uses: actions/upload-artifact@v4
         with:
@@ -33,6 +33,11 @@ jobs:
             ./README.md
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+      - name: Upload test results to Codecov
+        if: ${{ !cancelled() }}
+        uses: codecov/test-results-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
