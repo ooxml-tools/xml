@@ -42,7 +42,8 @@ safeXml`<foo>hello</bar>`
 Substitution of arrays "just works" so you can map values in the tagged template literals  
  
 ```ts
-const outXml = safeXml`<test>${[1,2,3].map(n => safeXml`<name>item ${1}<name>`)}</test>`
+const items = [1,2,3].map(n => safeXml`<name>item ${1}</name>`);
+const outXml = safeXml`<test>${items}</test>`
 assert.equal(outXml, `<test><name>item 1</name><name>item 2</name><name>item 3</name></test>`);
 ```
 
