@@ -16,7 +16,7 @@ export default [
       dir: outputDir,
       format: "es",
     },
-    external: ["yargs/yargs", "yargs/helpers", "fs/promises"],
+    external: ["yargs/yargs", "yargs/helpers", "fs/promises", "xml-js"],
     plugins: [
       json(),
       typescript({ tsconfig: "./tsconfig.json" }),
