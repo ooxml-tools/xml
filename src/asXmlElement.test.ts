@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { asXmlElement } from "./asXmlElement";
+import { asXmlElement } from "./";
 
 const outputElement = {
     "elements": [

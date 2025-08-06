@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest"
-import { collapseFragments } from "./collapseFragments"
+import { collapseFragments } from "./"
 
 describe("collapseFragments", () => {
     test("without fragments", () => {
@@ -81,4 +81,5 @@ describe("collapseFragments", () => {
             ]
           })
     })
+
 })

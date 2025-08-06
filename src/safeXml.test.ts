@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { safeXml } from "./safeXml";
+import { safeXml } from "./";
 
 describe("safeXml", () => {
     test("basic valid", () => {

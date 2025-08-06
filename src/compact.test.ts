@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { compact } from "./compact";
+import { compact } from "./";
 
 describe("xmlCompact", () => {
     test("already compacted", () => {

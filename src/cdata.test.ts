@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { cdata } from "./cdata";
+import { cdata } from "./";
 
 describe("cdata", () => {
     test("string", () => {

@@ -1,15 +1,6 @@
 import type { Element } from "xml-js";
 import { asXmlElement } from "./asXmlElement";
 
-
-export function createFragment(elements: Element[]): Element {
-  return {
-    type: "element",
-    name: "XML_FRAGMENT",
-    elements: elements,
-  };
-}
-
 function _collapseFragments(orig: Element) {
   let node = orig;
   const cloneIfRequired = () => {
@@ -48,9 +39,6 @@ function _collapseFragments(orig: Element) {
 
 export function collapseFragments(root: string | Element) {
   const out = _collapseFragments(asXmlElement(root));
-  if (Array.isArray(out)) {
-    return createFragment(out);
-  }
   return out;
 }
 

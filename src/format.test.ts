@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vitest";
-import { format } from "./format";
+import { format } from "./";
 
 describe("format", () => {
   test("default", () => {
