@@ -61,7 +61,7 @@ const outXml = compact(`
 assert.equal(outXml, "<test>something</test>");
 ```
 
-### `removeFragments`
+### `collapseFragments`
 For XML to be valid, there must be a single root node. When composing apps it's handy for that not to be true.
 
 For example the following would error
@@ -84,7 +84,7 @@ const xml = safeXml`
 `
 ```
 
-So we did just that, `removeFragments` walks over a tree removing `<XML_FRAGMENT>...</XML_FRAGMENT>` nodes.
+So we did just that, `collapseFragments` walks over a tree removing `<XML_FRAGMENT>...</XML_FRAGMENT>` nodes.
 
 ```ts
 const innerBit = safeXml`
@@ -93,7 +93,7 @@ const innerBit = safeXml`
         <name>bar</name>
     </XML_FRAGMENT>
 `
-const newXml = removeFragments(
+const newXml = collapseFragments(
     safeXml`
         <doc>
             ${innerBit}
