@@ -1,0 +1,53 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`removeTestIds > removed all _testid attributes 1`] = `
+{
+  "attributes": undefined,
+  "elements": [
+    {
+      "attributes": undefined,
+      "elements": [
+        {
+          "attributes": {},
+          "elements": [
+            {
+              "attributes": {},
+              "elements": [
+                {
+                  "attributes": undefined,
+                  "elements": undefined,
+                  "text": "
+            TEST
+          ",
+                  "type": "text",
+                },
+              ],
+              "name": "foo",
+              "type": "element",
+            },
+          ],
+          "name": "foo",
+          "type": "element",
+        },
+        {
+          "attributes": {},
+          "elements": [
+            {
+              "attributes": undefined,
+              "elements": undefined,
+              "text": "
+          TEST
+        ",
+              "type": "text",
+            },
+          ],
+          "name": "bar",
+          "type": "element",
+        },
+      ],
+      "name": "root",
+      "type": "element",
+    },
+  ],
+}
+`;

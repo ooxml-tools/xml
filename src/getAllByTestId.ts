@@ -10,7 +10,6 @@ function getAllByTestIdRecursive(
   if (testAttrValue === id) {
     collection.push(root);
   }
-  console.log(">>", root);
   if (root.elements) {
     for (const element of root.elements) {
       getAllByTestIdRecursive(element, id, collection);
