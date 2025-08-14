@@ -1,0 +1,1 @@
+export const TEST_ATTR_NAME = "_testid";
