@@ -41,4 +41,3 @@ export function collapseFragments(root: string | Element) {
   const out = _collapseFragments(asXmlElement(root));
   return out;
 }
-

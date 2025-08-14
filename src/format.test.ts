@@ -13,18 +13,21 @@ describe("format", () => {
        foobar 
   </one>
 </test>`);
-  })
+  });
 
   test("with spaces", () => {
-    const xml = format(`
+    const xml = format(
+      `
       <test>
         <one>   foobar </one>
       </test>
-    `, {spaces: 4});
+    `,
+      { spaces: 4 },
+    );
     expect(xml).toEqual(`<test>
     <one>
            foobar 
     </one>
 </test>`);
-  })
-})
+  });
+});

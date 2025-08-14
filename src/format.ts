@@ -1,9 +1,9 @@
 import { js2xml, xml2js } from "xml-js";
 
 export type FormatOptions = {
-    spaces?: number;
-}
-export function format(input: string, {spaces=2}: FormatOptions = {}) {
+  spaces?: number;
+};
+export function format(input: string, { spaces = 2 }: FormatOptions = {}) {
   const elementJson = xml2js(input, {
     compact: false,
     captureSpacesBetweenElements: false,
