@@ -144,6 +144,63 @@ format(`
  */
 ```
 
+## `getAllByTestId`
+
+```ts
+const element = getAllByTestId(`
+    <root>
+        <name _testid="test">
+            Hello
+        </name>
+    </test>
+`)
+```
+
+## `getByTestId`
+
+```ts
+const element = getByTestId(`
+    <root>
+        <name _testid="test">
+            Hello
+        </name>
+    </test>
+`)
+```
+
+## `getSingleTextNode`
+Returns a single text node if one exists
+
+```ts
+getSingleTextNode(`<test>hello world</test>`) // => {type: "text", text: "hello world"}
+```
+
+Else throws an error
+
+```ts
+getSingleTextNode(`<test>hello <foo>inner node</foo> world</test>`) // => throws Error
+```
+
+## `removeTestIds`
+
+```ts
+const element = removeTestIds(`
+    <root>
+        <name _testid="test">
+            Hello
+        </name>
+    </test>
+`) /* =>
+ * <root>
+ *     <name>
+ *         Hello
+ *     </name>
+ * </test>
+ */
+```
+
+
+
 ## CI
 
 [![codecov](https://codecov.io/gh/ooxml-tools/xml/graph/badge.svg?token=N82AKMVJM7)](https://codecov.io/gh/ooxml-tools/xml)
