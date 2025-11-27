@@ -14,7 +14,12 @@
     "build": "rollup -c rollup.config.ts --configPlugin typescript"
   },
   "exports": {
-    ".": "./dist/npm/index.js"
+    ".": {
+      "import": {
+        "types": "./dist/npm/index.js",
+        "default": "./dist/npm/types.d.ts"
+      }
+    }
   },
   "files": [
     "./dist/npm",
