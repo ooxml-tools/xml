@@ -10,3 +10,4 @@ export * from "./getAllByTestId";
 export * from "./getByTestId";
 export * from "./getSingleTextNode";
 export * from "./removeTestIds";
+export * from "./clean";
