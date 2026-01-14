@@ -12,6 +12,16 @@ describe("safeXml", () => {
     expect(output).toEqual("<name>testing</name>");
   });
 
+  test("valid with null variable", () => {
+    const output = safeXml`<name>${null}</name>`;
+    expect(output).toEqual("<name></name>");
+  });
+
+  test("valid with undefined variable", () => {
+    const output = safeXml`<name>${undefined}</name>`;
+    expect(output).toEqual("<name></name>");
+  });
+
   test("valid with array variable", () => {
     const output = safeXml`<name>${["this", " is", " awesome!"]}</name>`;
     expect(output).toEqual("<name>this is awesome!</name>");
