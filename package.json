@@ -1,7 +1,7 @@
 {
   "name": "@ooxml-tools/xml",
   "description": "Some XML helpers to help with OOXML development",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "license": "MIT",
   "main": "./dist/npm/index.js",
   "types": "./dist/npm/types.d.ts",
