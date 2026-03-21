@@ -11,4 +11,14 @@ describe("cdata", () => {
     const output = cdata("one < two");
     expect(output).toEqual("<![CDATA[one < two]]>");
   });
+
+  test("null", () => {
+    const output = cdata(null);
+    expect(output).toEqual("");
+  });
+
+  test("undefined", () => {
+    const output = cdata(undefined);
+    expect(output).toEqual("");
+  });
 });

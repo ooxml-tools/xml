@@ -31,4 +31,9 @@ describe("safeXml", () => {
     process.env.NODE_ENV = "development";
     expect(() => safeXml`<foo></bar>`).toThrow("Unmatched closing tag: bar");
   });
+
+  test("with null/undefined", () => {
+    const output = safeXml`<name>${["this", undefined, " is", null, " awesome!"]}</name>`;
+    expect(output).toEqual("<name>this is awesome!</name>");
+  });
 });
