@@ -7,7 +7,7 @@ import { xml2js } from "xml-js";
  */
 export function safeXml(
   templateStrings: TemplateStringsArray,
-  ...templateValues: (undefined | null | string | number | (string | number)[])[]
+  ...templateValues: (undefined | null | string | number | (undefined | null | string | number)[])[]
 ) {
   let xml = "";
   for (let i = 0; i < templateStrings.length; i++) {
