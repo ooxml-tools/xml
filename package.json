@@ -18,12 +18,12 @@
   "exports": {
     ".": {
       "import": {
-        "types": "./dist/npm/es/index.js",
-        "default": "./dist/npm/es/types.d.ts"
+        "default": "./dist/npm/es/index.js",
+        "types": "./dist/npm/es/types.d.ts"
       },
       "require": {
-        "types": "./dist/npm/cjs/index.js",
-        "default": "./dist/npm/cjs/types.d.ts"
+        "default": "./dist/npm/cjs/index.js",
+        "types": "./dist/npm/cjs/types.d.ts"
       }
     }
   },
