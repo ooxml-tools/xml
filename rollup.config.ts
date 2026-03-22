@@ -12,10 +12,16 @@ export default [
     input: {
       index: "src/index.ts",
     },
-    output: {
-      dir: outputDir,
-      format: "es",
-    },
+    output: [
+      {
+        dir: join(outputDir, "es"),
+        format: "es",
+      },
+      {
+        dir: join(outputDir, "cjs"),
+        format: "cjs",
+      },
+    ],
     external: ["yargs/yargs", "yargs/helpers", "fs/promises", "xml-js"],
     plugins: [
       json(),
@@ -29,7 +35,10 @@ export default [
   },
   {
     input: "src/index.ts",
-    output: [{ file: `${outputDir}/types.d.ts`, format: "es" }],
+    output: [
+      { file: `${outputDir}/es/types.d.ts`, format: "es" },
+      { file: `${outputDir}/cjs/types.d.ts`, format: "cjs" },
+    ],
     plugins: [json(), typescriptPaths({ preserveExtensions: true }), dts()],
   },
 ];

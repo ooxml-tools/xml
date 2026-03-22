@@ -3,8 +3,6 @@
   "description": "Some XML helpers to help with OOXML development",
   "version": "0.6.0",
   "license": "MIT",
-  "main": "./dist/npm/index.js",
-  "types": "./dist/npm/types.d.ts",
   "type": "module",
   "scripts": {
     "lint": "npx prettier . --check",
@@ -12,6 +10,18 @@
     "test:ci": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml",
     "lint:format": "npx prettier . --write",
     "build": "rollup -c rollup.config.ts --configPlugin typescript"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/npm/es/index.js",
+        "default": "./dist/npm/es/types.d.ts"
+      },
+      "require": {
+        "types": "./dist/npm/cjs/index.js",
+        "default": "./dist/npm/cjs/types.d.ts"
+      }
+    }
   },
   "files": [
     "./dist/npm",
