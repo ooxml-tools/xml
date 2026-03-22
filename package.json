@@ -4,6 +4,10 @@
   "version": "0.7.1",
   "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ooxml-tools/xml"
+  },
   "scripts": {
     "lint": "npx prettier . --check",
     "test": "vitest run --coverage",
