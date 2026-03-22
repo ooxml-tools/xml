@@ -17,8 +17,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
         with:
           node-version: "24.x"
       - run: npm ci
@@ -26,7 +26,7 @@ jobs:
       - run: npm run build
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: npm
           path: |
@@ -39,8 +39,9 @@ jobs:
           token: ${{ secrets.CODECOV_TOKEN }}
       - name: Upload test results to Codecov
         if: ${{ !cancelled() }}
-        uses: codecov/test-results-action@v1
+        uses: codecov/codecov-action@v5
         with:
+          report-type: test_results
           token: ${{ secrets.CODECOV_TOKEN }}
 
   release:
@@ -51,7 +52,7 @@ jobs:
       contents: write
       id-token: write
     steps:
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v6
         with:
           node-version: "24.x"
           registry-url: "https://registry.npmjs.org"
