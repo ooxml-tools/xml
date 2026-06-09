@@ -52,8 +52,10 @@
     "typescript": "^5.5.4",
     "vitest": "^4.0.10"
   },
+  "packageManager": "pnpm@11.2.0",
   "engines": {
-    "node": ">=20.x"
+    "node": ">=20.x",
+    "pnpm": ">=11"
   },
   "dependencies": {
     "xml-js": "^1.6.11"
