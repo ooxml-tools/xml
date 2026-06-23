@@ -36,4 +36,11 @@ describe("safeXml", () => {
     const output = safeXml`<name>${["this", undefined, " is", null, " awesome!"]}</name>`;
     expect(output).toEqual("<name>this is awesome!</name>");
   });
+
+  test("valid with the common '&&' syntax", () => {
+    const truthyOutput = safeXml`<name>${true && "this is awesome!"}</name>`;
+    expect(truthyOutput).toEqual("<name>this is awesome!</name>");
+    const falseyOutput = safeXml`<name>${false && "this is awesome!"}</name>`;
+    expect(falseyOutput).toEqual("<name></name>");
+  });
 });

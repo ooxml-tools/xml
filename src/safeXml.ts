@@ -7,11 +7,11 @@ import { xml2js } from "xml-js";
  */
 export function safeXml(
   templateStrings: TemplateStringsArray,
-  ...templateValues: (undefined | null | string | number | (undefined | null | string | number)[])[]
+  ...templateValues: (undefined | null | false | string | number | (undefined | null | false | string | number)[])[]
 ) {
   let xml = "";
   for (let i = 0; i < templateStrings.length; i++) {
-    if (templateValues[i] !== undefined && templateValues[i] !== null) {
+    if (templateValues[i] !== undefined && templateValues[i] !== null && templateValues[i] !== false) {
       const value = templateValues[i];
       const xmlPart = Array.isArray(value) ? value.join("") : value;
       xml += `${templateStrings[i]!}${xmlPart}`;
